@@ -15,6 +15,12 @@ namespace JSONSerializationAndDeserialization
             Movie movie = new Movie { Id = 1, Title = "Mission Impossible" };
             string result = JsonConvert.SerializeObject(movie);
             Console.WriteLine(result);
+
+            Console.WriteLine("\n\n Deserialization");
+            Movie newMovie = JsonConvert.DeserializeObject<Movie>(result);
+            Console.WriteLine("Id is : " + newMovie.Id);
+            Console.WriteLine("Title is: " + newMovie.Title);
+            Console.WriteLine("\n\n");
         }
     }
     class Movie
