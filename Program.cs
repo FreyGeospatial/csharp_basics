@@ -26,7 +26,20 @@ namespace JSONSerializationAndDeserialization
             dynamic stuff = JObject.Parse("{'Movie': {'Title': 'Saving Private Ryan','Genre': 'Drama','Actors': {'Actor1': 'Matt Daemon','Actor2': 'Tom Hanks'}},'Other': {'Random': 'Something else'}}");
 
             Console.WriteLine(stuff);
-            Console.WriteLine("\n\n")
+            Console.WriteLine("\n\n");
+
+            // this is the same, but different
+
+            dynamic stuff2 = JsonConvert.DeserializeObject("{'Movie': {'Title': 'Saving Private Ryan','Genre': 'Drama','Actors': {'Actor1': 'Matt Daemon','Actor2': 'Tom Hanks'}},'Other': {'Random': 'Something else'}}");
+
+            Console.WriteLine(stuff2);
+            Console.WriteLine("\n\n");
+
+            Console.WriteLine("Actor1: " + stuff2.Movie.Actors.Actor1);
+            Console.WriteLine("Actor2: " + stuff2.Movie.Actors.Actor2);
+
+            //var myDict = new Dictionary<string, string>();
+            
 
         }
     }
