@@ -25,7 +25,8 @@ namespace JSONSerializationAndDeserialization
 
             dynamic stuff = JObject.Parse("{'Movie': {'Title': 'Saving Private Ryan','Genre': 'Drama','Actors': {'Actor1': 'Matt Daemon','Actor2': 'Tom Hanks'}},'Other': {'Random': 'Something else'}}");
 
-//            Movie movie = new Movie 
+            Console.WriteLine(stuff);
+            Console.WriteLine("\n\n")
 
         }
     }
