@@ -12,20 +12,29 @@ namespace JSONSerializationAndDeserialization
         static void Main(string[] args)
         {
             Console.WriteLine("Serialization");
-            Movie movie = new Movie { Id = 1, Title = "Mission Impossible" };
-            string result = JsonConvert.SerializeObject(movie);
+            Actors actors = new Actors { Actor1 = "John Wayne", Actor2 = "Jennifer Lopez"};
+            string result = JsonConvert.SerializeObject(actors);
             Console.WriteLine(result);
 
             Console.WriteLine("\n\n Deserialization");
-            Movie newMovie = JsonConvert.DeserializeObject<Movie>(result);
-            Console.WriteLine("Id is : " + newMovie.Id);
-            Console.WriteLine("Title is: " + newMovie.Title);
+            Actors newActor = JsonConvert.DeserializeObject<Actors>(result);
+            Console.WriteLine("Actor1 is : " + newActor.Actor2);
+            Console.WriteLine("Actor2 is: " + newActor.Actor2);
             Console.WriteLine("\n\n");
+
+
         }
     }
     class Movie
     {
-        public int Id { get; set; }
-        public string Title {get; set; }
+        public string Title { get; set; }
+        public string Genre { get; set; }
+        public Actors Actors { get; set; }
+    }
+
+    class Actors
+    {   
+        public string Actor1 { get; set; }
+        public string Actor2 { get; set; }
     }
 }
