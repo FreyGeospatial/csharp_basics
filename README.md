@@ -5,4 +5,4 @@ I need to learn some basic C# for my job, so this is where I'll keep my learning
 - `dotnet build`
 - `dotnet run`
 
-If this doesn't work, try running `dotnet new console` prior to these steps.
+If this doesn't work, try running `dotnet new console` prior to these steps. You may also need to run `dotnet restore` to download dependencies.
