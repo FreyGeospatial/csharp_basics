@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,9 @@ namespace JSONSerializationAndDeserialization
             Console.WriteLine("Actor2 is: " + newActor.Actor2);
             Console.WriteLine("\n\n");
 
+            dynamic stuff = JObject.Parse("{'Movie': {'Title': 'Saving Private Ryan','Genre': 'Drama','Actors': {'Actor1': 'Matt Daemon','Actor2': 'Tom Hanks'}},'Other': {'Random': 'Something else'}}");
+
+//            Movie movie = new Movie 
 
         }
     }
